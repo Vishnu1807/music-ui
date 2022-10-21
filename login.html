@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+  </head>
+  <body
+    class="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-orange-600 to-orange-400"
+  >
+    <form action="index.html" class="bg-white lg:w-3/12 md:w-5/12 w-9/12 p-3 rounded-lg shadow-lg">
+      <div class="logo w-full flex flex-col items-center justify-center px-3 pt-3">
+        <i class="ri-disc-fill text-6xl drop-shadow-lg shadow-orange-300 text-orange-500"></i>
+        <span class="font-semibold flex text-sm items-center">
+          <p class="text-orange-500">Pi</p>
+          <p>Music</p>
+        </span>
+      </div>
+      <label for="email">
+        <div class="flex items-center text-gray-800 mb-2">
+          <i class="ri-mail-open-line text-lg"></i>
+          <p class="font-medium ml-1">Email</p>
+        </div>
+        <input
+          type="email"
+          name=""
+          class="border w-full rounded-lg shadow-sm p-2 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+          placeholder="Enter email"
+          required
+        />
+        <span class="text-xs text-rose-600 font-semibold hidden">
+          Email is required
+        </span>
+      </label>
+      <label for="email">
+        <div class="flex items-center text-gray-800 my-2">
+          <i class="ri-lock-line text-lg"></i>
+          <p class="font-medium ml-1">Password</p>
+        </div>
+        <input
+          type="password"
+          name=""
+          class="border w-full rounded-lg shadow-sm p-2 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+          placeholder="Enter Password"
+          min="8"
+          required
+        />
+        <span class="text-xs text-rose-600 font-semibold hidden">
+          Password is required
+        </span>
+      </label>
+      <input
+        type="submit"
+        value="Login"
+        name=""
+        class="w-full p-2 mt-6 cursor-pointer rounded-lg text-white font-semibold shadow-lg shadow-orange-300 bg-gradient-to-tr from-orange-600 to-orange-400"
+      />
+    </form>
+  </body>
+</html>

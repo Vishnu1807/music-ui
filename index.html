@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pi Music</title>
+  </head>
+  <body class="bg-gray-100 overflow-auto lg:overflow-hidden md:overflow-hidden">
+    <div class="grid grid-cols-12">
+      <div
+        class="fixed sidebar lg:relative md:relative z-20 sm:z-auto col-span-2 lg:col-span-2 md:col-span-3 bg-white h-screen flex flex-col"
+      >
+        <div
+          class="aurora absolute top-0 left-0 bg-orange-600 w-32 h-32 rounded-full"
+        ></div>
+        <div
+          class="aurora absolute ml-24 top-0 left-0 bg-cyan-600 w-32 h-32 rounded-full"
+        ></div>
+        <div class="menu-icon p-3 text-right">
+          <i class="ri-menu-2-line text-xl"></i>
+        </div>
+        <div class="logo flex items-center p-3">
+          <i class="ri-disc-fill text-4xl text-orange-500"></i>
+          <span class="font-semibold flex text-xl items-center">
+            <p class="text-orange-500">Pi</p>
+            <p>Music</p>
+          </span>
+        </div>
+        <div class="tiles text-sm">
+          <div class="tile flex items-center">
+            <div
+              class="tile-tile shadow-lg grow mx-3 my-2 rounded-lg cursor-pointer flex items-center bg-black text-white p-3"
+            >
+              <i class="ri-home-smile-line text-xl"></i>
+              <p class="px-2 font-semibold">Home</p>
+            </div>
+            <div
+              class="w-1 bg-black stripe-line-active rounded-full h-10"
+            ></div>
+          </div>
+          <div class="tile flex items-center">
+            <div
+              class="tile-tile hover:shadow-lg grow mx-3 my-2 rounded-lg cursor-pointer flex items-center hover:bg-black hover:text-white p-3"
+            >
+              <i class="ri-stack-line text-xl"></i>
+              <p class="px-2 font-semibold">Trending</p>
+            </div>
+            <div class="w-1 bg-black stripe-line rounded-full h-10"></div>
+          </div>
+          <div class="tile flex items-center">
+            <div
+              class="tile-tile hover:shadow-lg grow mx-3 my-2 rounded-lg cursor-pointer flex items-center hover:bg-black hover:text-white p-3"
+            >
+              <i class="ri-compass-3-line text-xl"></i>
+              <p class="px-2 font-semibold">Feed</p>
+            </div>
+            <div class="w-1 bg-black stripe-line rounded-full h-10"></div>
+          </div>
+          <div class="tile flex items-center">
+            <div
+              class="tile-tile hover:shadow-lg grow mx-3 my-2 rounded-lg cursor-pointer flex items-center hover:bg-black hover:text-white p-3"
+            >
+              <i class="ri-compass-3-line text-xl"></i>
+              <p class="px-2 font-semibold">Contact Us</p>
+            </div>
+            <div class="w-1 bg-black stripe-line rounded-full h-10"></div>
+          </div>
+        </div>
+        <div
+          class="tile-h uppercase text-gray-500 text-xs font-medium px-6 py-3"
+        >
+          <p>Discover</p>
+        </div>
+        <div class="tiles grow text-sm">
+          <div class="tile flex items-center">
+            <a href="login.html" class="w-full">
+              <div
+                class="tile-tile hover:shadow-lg grow mx-3 my-2 rounded-lg cursor-pointer flex items-center hover:bg-black hover:text-white p-3"
+              >
+                <i class="ri-hearts-line text-xl"></i>
+                <p class="px-2 font-semibold">Login</p>
+              </div>
+            </a>
+            <div class="w-1 bg-black stripe-line rounded-full h-10"></div>
+          </div>
+          <div class="tile flex items-center">
+            <a href="login.html" class="w-full">
+              <div
+                class="tile-tile hover:shadow-lg grow mx-3 my-2 rounded-lg cursor-pointer flex items-center hover:bg-black hover:text-white p-3"
+              >
+                <i class="ri-star-line text-xl"></i>
+                <p class="px-2 font-semibold">Admin Login</p>
+              </div>
+            </a>
+            <div class="w-1 bg-black stripe-line rounded-full h-10"></div>
+          </div>
+        </div>
+        <div class="font-semibold text-sm p-3">
+          Created By
+          <span class="text-orange-500 text-lg">Vishnu</span>
+          &
+          <span class="text-orange-500 text-lg">Vishal</span>
+        </div>
+        <div class="current-album flex items-center border-t p-3">
+          <img
+            src="https://source.unsplash.com/40x40/?color"
+            class="rounded-full"
+            alt=""
+          />
+          <p class="text-sm font-semibold grow px-2">Vishnu Kanth</p>
+          <i class="ri-arrow-right-s-line text-2xl"></i>
+        </div>
+      </div>
+      <div
+        class="col-span-12 lg:col-span-7 md:col-span-9 overflow-x-hidden overflow-y-auto relative h-screen"
+      >
+        <div class="top p-6 flex items-center">
+          <div class="lr text-xl flex items-center p-3">
+            <i class="ri-arrow-left-line mr-2"></i>
+            <i class="ri-arrow-right-line ml-2"></i>
+          </div>
+          <div
+            class="search z-10 shadow-sm bg-white p-3 flex items-center rounded-full grow"
+          >
+            <i class="ri-search-2-line mr-2"></i>
+            <input type="text" name="" placeholder="Search for artist,songs" />
+          </div>
+        </div>
+        <div class="main w-full w-screen sm:w-auto p-6">
+          <div class="title flex items-center text-gray-600">
+            <p>What's hot</p>
+            <i class="ri-fire-fill text-orange-500 pl-2"></i>
+          </div>
+          <div class="flex items-center">
+            <div class="text-3xl font-medium grow">Trending</div>
+            <div class="more flex items-center text-gray-500">
+              <p class="font-semibold">More</p>
+              <i class="ri-arrow-right-s-line text-xl"></i>
+            </div>
+          </div>
+          <div class="hero my-3 rounded-xl p-3">
+            <div class="p-3 glass max-w-fit rounded-xl shadow-lg m-3">
+              <p class="text-gray-200">Artist</p>
+              <p class="text-2xl font-medium">On Top</p>
+              <p class="text-2xl font-medium mb-2">Of The World</p>
+              <div class="buttons text-sm">
+                <button
+                  class="bg-black text-white font-medium shadow-lg border border-black rounded-full px-3 py-1"
+                >
+                  PLAY
+                </button>
+                <button
+                  class="text-black shadow-lg border border-black ml-2 font-medium rounded-full px-3 py-1"
+                >
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="song-list">
+            <div class="top flex items-center justify-between p-3">
+              <p class="text-xl font-medium">My PlayList</p>
+              <p class="text-sm text-gray-500">Show All</p>
+            </div>
+          </div>
+          <table class="w-full text-xs sm:text-sm">
+            <tbody>
+              <tr class="uppercase text-gray-500">
+                <td class="p-3">#</td>
+                <td class="p-3">title</td>
+                <td class="p-3">Artist</td>
+                <td class="p-3">Time</td>
+                <td class="p-3">Album</td>
+              </tr>
+              <tr
+                class="uppercase font-semibold text-gray-800 bg-white shadow-xl cursor-pointer"
+              >
+                <td class="p-3 rounded-l-xl">
+                  <i class="ri-volume-up-line"></i>
+                </td>
+                <td class="p-3">Channa Mereya</td>
+                <td class="p-3">Arijit Singh</td>
+                <td class="p-3">3:25</td>
+                <td class="p-3 rounded-r-xl">Top Hits 99</td>
+              </tr>
+              <tr
+                class="uppercase text-gray-600 hover:bg-white hover:font-semibold hover:shadow-xl cursor-pointer"
+              >
+                <td class="p-3 rounded-l-xl">
+                  <i class="ri-volume-up-line"></i>
+                </td>
+                <td class="p-3">Dont You Give Up </td>
+                <td class="p-3">Justin bieber</td>
+                <td class="p-3">2:28</td>
+                <td class="p-3 rounded-r-xl">Top Hits 99</td>
+              </tr>
+              <tr 
+              class="uppercase text-gray-600 hover:bg-white hover:font-semibold hover:shadow-xl cursor-pointer"
+              >
+                <td class="p-3 rounded-l-xl">
+                  <i class="ri-volume-up-line"></i>
+                </td>
+                <td class="p-3">Tu aakhe dekh le </td>
+                <td class="p-3">King</td>
+                <td class="p-3">5:28</td>
+                <td class="p-3 rounded-r-xl">Top Hits 99</td>
+              </tr>
+              <tr
+                class="uppercase text-gray-600 hover:bg-white hover:font-semibold hover:shadow-xl cursor-pointer"
+              >
+                <td class="p-3 rounded-l-xl">
+                  <i class="ri-volume-up-line"></i>
+                </td>
+                <td class="p-3">Ae dil hai mushkil </td>
+                <td class="p-3">Arijit singh</td>
+                <td class="p-3">4:28</td>
+                <td class="p-3 rounded-r-xl">Top Hits 99</td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="aurora absolute bg-orange-600 w-32 h-32 rounded-full"
+          ></div>
+          <div
+            class="aurora absolute ml-24 bg-cyan-600 w-32 h-32 rounded-full"
+          ></div>
+        </div>
+        <div class="w-screen sm:w-full flex items-center justify-center">
+          <div
+            class="player shadow-lg w-10/12 bg-white bottom-0 z-10 p-3 m-3 rounded-lg"
+          >
+            <div class="controls flex items-center">
+              <div class="flex items-center hidden sm:flex">
+                <div
+                  class="btn bg-gray-300 mr-2 w-8 h-8 flex items-center justify-center rounded-lg"
+                >
+                  <i class="ri-heart-2-line"></i>
+                </div>
+                <div
+                  class="btn bg-gray-300 mr-2 w-8 h-8 flex items-center justify-center rounded-lg"
+                >
+                  <i class="ri-music-line"></i>
+                </div>
+                <div
+                  class="btn bg-gray-300 w-8 h-8 flex items-center justify-center rounded-lg"
+                >
+                  <i class="ri-fullscreen-fill"></i>
+                </div>
+              </div>
+              <div class="main-controls grow flex items-center justify-center">
+                <i class="ri-repeat-2-line text-gray-500 mr-2"></i>
+                <div class="flex items-center">
+                  <i class="ri-rewind-fill text-lg"></i>
+                  <div
+                    class="text-white bg-orange-600 text-xl shadow-lg w-10 flex items-center justify-center mx-3 h-10 p-3 rounded-full"
+                  >
+                    <i class="ri-play-fill"></i>
+                  </div>
+                  <i class="ri-speed-fill text-lg"></i>
+                </div>
+                <i class="ri-shuffle-line text-gray-500 ml-2"></i>
+              </div>
+              <div class="flex items-center hidden sm:flex">
+                <i class="ri-volume-down-line text-xl text-gray-500"></i>
+                <div
+                  class="w-16 mx-2 h-0.5 bg-gray-300 rounded-full flex items-center"
+                >
+                  <div class="w-1/2 h-0.5 rounded-l-full bg-black"></div>
+                  <div
+                    class="bg-black rounded-full w-2 h-2 flex items-center justify-center"
+                  >
+                    <div class="w-1 h-1 bg-white rounded-full"></div>
+                  </div>
+                </div>
+                <i class="ri-volume-up-line text-xl text-gray-500"></i>
+              </div>
+            </div>
+            <div class="controls pt-3 flex items-center">
+              <p class="text-sm font-medium">0:43</p>
+              <div
+                class="w-full mx-2 h-0.5 bg-gray-300 rounded-full flex items-center"
+              >
+                <div class="w-1/2 h-0.5 rounded-l-full bg-black"></div>
+                <div
+                  class="bg-black rounded-full w-2 h-2 flex items-center justify-center"
+                >
+                  <div class="w-1 h-1 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <p class="text-sm font-medium">2:49</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-span-3 relative hidden lg:flex right-0 z-10 bg-gradient-to-r from-orange-600 to-orange-400 text-white flex flex-col p-3 h-screen"
+      >
+        <div class="text-xl font-medium p-3">
+          <p>Shortcuts</p>
+        </div>
+        <div class="chips flex text-black flex-wrap">
+          <div
+            class="chip mr-2 flex items-center px-3 bg-white shadow-sm rounded-full max-w-fit"
+          >
+            <i class="ri-heart-2-fill pr-1 text-orange-500"></i>
+            <p class="text-xs font-semibold">Chill Hits</p>
+          </div>
+          <div
+            class="chip flex items-center p-3 bg-white shadow-sm rounded-full max-w-fit"
+          >
+            <i class="ri-star-fill pr-1 text-yellow-500"></i>
+            <p class="text-xs font-semibold">Hip & Hop</p>
+          </div>
+          <div
+            class="chip flex ml-2 items-center p-3 bg-white shadow-sm rounded-full max-w-fit"
+          >
+            <i class="ri-focus-fill pr-1 text-cyan-500"></i>
+            <p class="text-xs font-semibold">Accoustic</p>
+          </div>
+          <div
+            class="chip flex mt-2 items-center p-3 bg-white shadow-sm rounded-full max-w-fit"
+          >
+            <i class="ri-music-fill pr-1 text-blue-700"></i>
+            <p class="text-xs font-semibold">Indie Pop</p>
+          </div>
+        </div>
+        <div class="artist grow">
+          <div class="text-xl font-medium p-3">
+            <p>Fav Artist</p>
+          </div>
+          <div class="tile-song flex items-center px-1 py-3">
+            <img
+              src="https://source.unsplash.com/40x40/?song"
+              class="rounded-full"
+              alt=""
+            />
+            <div class="title-artist text-sm pl-2 grow">
+              <p class="font-semibold">Tuje Kitna chahane lage </p>
+              <p class="text-gray-200">196 songs in library</p>
+            </div>
+            <i class="ri-more-fill pr-2"></i>
+          </div>
+          <div class="tile-song flex items-center px-1 py-3">
+            <img
+              src="https://source.unsplash.com/40x40/?new"
+              class="rounded-full"
+              alt=""
+            />
+            <div class="title-artist text-sm pl-2 grow">
+              <p class="font-semibold">Superheros</p>
+              <p class="text-gray-200">127 songs in library</p>
+            </div>
+            <i class="ri-more-fill pr-2"></i>
+          </div>
+          <div class="tile-song flex items-center px-1 py-3">
+            <img
+              src="https://source.unsplash.com/40x40/?music"
+              class="rounded-full"
+              alt=""
+            />
+            <div class="title-artist text-sm pl-2 grow">
+              <p class="font-semibold">Maa Tuje Salam</p>
+              <p class="text-gray-200">17 songs in library</p>
+            </div>
+            <i class="ri-more-fill pr-2"></i>
+          </div>
+        </div>
+        <div
+          class="feature-song-tile bg-white rounded-xl m-3 p-3 shadow-lg flex flex-col items-center justify-center relative"
+        >
+          <img
+            src="https://source.unsplash.com/500x500/?poster"
+            class="rounded-xl w-full h-36"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
